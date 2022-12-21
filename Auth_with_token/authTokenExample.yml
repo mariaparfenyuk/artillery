@@ -1,0 +1,30 @@
+config:
+  target: 'https://keys.com'
+scenarios:
+  - flow:
+    - post:
+      name: 'Auth Token'
+      headers: 
+        Content-Type: 'application/x-www-form-urlencoded'
+        Accept: 'application/json'
+      url: '/token'
+      form: 
+        username: 'tester'
+        password: 'Pass1!'
+      capture:
+        json: '$.access_token'
+        as: 'auth_token'
+      expect:
+        statusCode: 200
+    - post:
+        name: 'Submit Application'
+        url: 'https://test.app.com'
+        headers: 
+          Authorization: 'Bearer {{ auth_token }}'
+        json:
+          application: '9986716'
+        capture:
+          json: '$.decisionId'
+          as: 'decisionId'
+        expect: 
+          statusCode: 201              
