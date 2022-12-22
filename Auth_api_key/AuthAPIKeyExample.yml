@@ -1,0 +1,8 @@
+config:
+  target: 'https://test.app.com'
+defaults:
+  headers: 
+    x-api-key: 'example_token'
+    x-User-email: 'test@test.com'
+plugins:
+  expect: {}
