@@ -20,6 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: /home/runner/work/artillery
 
       - name: Install Puppeteer browser
         run: npx puppeteer browsers install chrome
