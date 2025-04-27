@@ -1,0 +1,19 @@
+name: Accessibility Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  accessibility:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Accessibility Check
+        uses: MariiaParfeniuk/github-action-accessibility-check@v1
+        with:
+          url: 'https://wikipedia.org' 
