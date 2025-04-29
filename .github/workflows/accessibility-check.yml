@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install Puppeteer browser
-        run: npx puppeteer browsers install chrome
-
       - name: Run Accessibility Check
         uses: mariaparfenyuk/github-action-accessibility-check@v1
         with:
