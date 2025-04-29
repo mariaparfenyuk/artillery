@@ -13,12 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-
       - name: Run Accessibility Check
-        uses: mariaparfenyuk/github-action-accessibility-check@v1
+        uses: ./ 
         with:
-          url: 'https://wikipedia.org'
+          url: 'https://example.com'
