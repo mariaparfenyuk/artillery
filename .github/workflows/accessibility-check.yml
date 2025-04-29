@@ -20,9 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./artillery
 
       - name: Build project
         run: npm run build
+        working-directory: ./artillery
 
       - name: Run Accessibility Check
         uses: mariaparfenyuk/github-action-accessibility-check@v1
