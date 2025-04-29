@@ -14,6 +14,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run Accessibility Check
-        uses: ./ 
+        uses: mariaparfenyuk/github-action-accessibility-check@v1
         with:
-          url: 'https://example.com'
+          url: 'https://wikipedia.org'
